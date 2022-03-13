@@ -19,20 +19,26 @@
     <!-- link-style -->
     <link rel="stylesheet" href="./style/index.css" />
   </head>
+
   <body>
     <header>
       <nav
         class="nav-top-mobile d-flex justify-content-around align-items-center"
       >
-        <div class="col-1 div-hamburger">
-          <span>
-            <i class="bi bi-list"></i>
-          </span>
+        <div
+          class="col-1 d-flex justify-content-center div-hamburger"
+          onclick="openSidebar()"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
+
         <div class="col-5 profile">
           <img src="Images/profile.png" />
           <span>علی موسوی</span>
         </div>
+
         <div class="col-5 search-box">
           <span><i class="bi bi-search"></i></span>
           <input type="text" placeholder="جستجو..." />
@@ -51,30 +57,33 @@
             <li class="link">
               <a href="#">
                 <div class="link_details">
-                  <span style="--c: rgba(6, 188, 24, 0.67)" class="link_icon">
+                  <span class="link_icon">
                     <i class="bi bi-columns-gap"></i>
                   </span>
                   <span class="link_name">داشبورد</span>
                 </div>
               </a>
             </li>
-            <li class="link active">
+            <li class="link">
               <a href="#">
                 <div class="link_details">
-                  <span style="--c: rgba(6, 188, 24, 1)" class="link_icon"
-                    ><i class="bi bi-cart"></i
-                  ></span>
+                  <span class="link_icon">
+                    <i class="bi bi-cart"></i>
+                  </span>
                   <span class="link_name">فروشگاه</span>
                 </div>
-                <span class="link_arrow"
-                  ><i class="bi bi-caret-down-fill"></i
-                ></span>
+                <span class="link_arrow">
+                  <i class="bi bi-caret-left-fill"></i>
+                </span>
               </a>
 
               <ul class="sub-menu">
-                <li><a href="#">مدیریت فروشگاه</a></li>
-                <li><a href="#">مدیریت فروشگاه</a></li>
-                <li><a href="#">مدیریت فروشگاه</a></li>
+                <li class="s-link"><a href="#">مدیریت گروه محصولات</a></li>
+                <li class="s-link"><a href="#">مدیریت محصول</a></li>
+                <li class="s-link"><a href="#">مدیریت برند ها</a></li>
+                <li class="s-link"><a href="#">مدیریت گارانتی ها</a></li>
+                <li class="s-link"><a href="#">مدیریت رنگ ها</a></li>
+                <li class="s-link"><a href="#">مدیریت تخفیف ها</a></li>
               </ul>
             </li>
             <li class="link">
@@ -85,20 +94,45 @@
                   ></span>
                   <span class="link_name">سفارشات و سبد</span>
                 </div>
-                <span class="link_arrow"
-                  ><i class="bi bi-caret-down-fill"></i
-                ></span>
+                <span class="link_arrow">
+                  <i class="bi bi-caret-left-fill"></i>
+                </span>
               </a>
+
+              <ul class="sub-menu">
+                <li class="s-link"><a href="#">مدیریت سبد ها</a></li>
+                <li class="s-link"><a href="#">مدیریت سفارشات</a></li>
+                <li class="s-link"><a href="#">مدیریت نحوه ارسال</a></li>
+              </ul>
+            </li>
+            <li class="link">
+              <a href="#">
+                <div class="link_details">
+                  <span style="--c: rgba(6, 188, 24, 0.67)" class="link_icon"
+                    ><i class="bi bi-people"></i
+                  ></span>
+                  <span class="link_name">کار بران و همکاران</span>
+                </div>
+                <span class="link_arrow">
+                  <i class="bi bi-caret-left-fill"></i>
+                </span>
+              </a>
+
+              <ul class="sub-menu">
+                <li class="s-link"><a href="#">مشاهده کاربران</a></li>
+                <li class="s-link"><a href="#">نقش ها</a></li>
+                <li class="s-link"><a href="#">مجوزها</a></li>
+              </ul>
             </li>
           </ul>
         </div>
 
         <div class="logout">
           <a href="#">
-            <span class="logout_icon"
-              ><i class="bi bi-box-arrow-left"></i
-            ></span>
-            <span class="logout_name">خروج از حساب</span>
+            <span class="logout_icon">
+              <i class="bi bi-box-arrow-in-right"></i>
+            </span>
+            <span class="logout_name">ورود به حساب</span>
           </a>
         </div>
       </nav>
@@ -113,15 +147,7 @@
     <script src="./bootstrap/js/bootstrap.min.js"></script>
     <script src="./bootstrap/js/bootstrap.bundle.js"></script>
 
-    <script>
-      const sub_menues = document.querySelectorAll("#sub-menu");
-      const sub_menu = document.getElementById("sub-menu");
-      sub_menu.addEventListener("click", () => {
-        sub_menues.forEach((s) => {
-          s.classList.remove("open");
-        });
-        sub_menu.classList.add("open");
-      });
-    </script>
+    <!-- link-js -->
+    <script src="./js/index.js"></script>
   </body>
 </html>

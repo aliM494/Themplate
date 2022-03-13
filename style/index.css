@@ -7,6 +7,7 @@
   --color-menu: rgba(235, 243, 255, 1);
   --color-back: rgba(244, 248, 250, 1);
   --color-button: rgba(128, 0, 255, 1);
+  --color-button-opacity: rgba(128, 0, 255, 0.137);
   --color-menu-button: rgba(166, 166, 166, 1);
 }
 
@@ -14,20 +15,19 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  list-style: none;
 }
 
 a {
   text-decoration: none;
 }
 
-ul {
-  list-style: none;
-}
-
 body {
   background-color: var(--color-back);
   font-family: "iranSans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
+/* ------------------------------------Header------------------------------------ */
 
 .nav-top-mobile {
   position: fixed;
@@ -40,22 +40,50 @@ body {
   z-index: 2;
 }
 
-.nav-top-mobile .div-hamburger span {
+/* ---***---Hamburger---***--- */
+
+.div-hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 45px;
   height: 45px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 5px;
-  background-color: white;
   border-radius: 10px;
-  cursor: pointer;
+  background: rgb(255, 255, 255);
+  overflow: hidden;
 }
 
-.nav-top-mobile .div-hamburger i {
-  font-size: 30px;
-  color: var(--color-button);
+.div-hamburger span {
+  width: 25px;
+  margin: 3px;
+  border: 0.5px solid var(--color-button);
+  background: var(--color-button);
+  border-radius: 60px;
+  transition: 0.5s;
 }
+
+.div-hamburger.active span {
+  border: 0.5px solid #c90101;
+  transition-delay: 0.125ms;
+  transition: 0.5s;
+}
+
+.div-hamburger.active span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.div-hamburger.active span:nth-child(2) {
+  transform: translateX(100px);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.div-hamburger.active span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* ---***---Profile---***--- */
 
 .nav-top-mobile .profile {
   display: flex;
@@ -71,8 +99,10 @@ body {
 
 .nav-top-mobile .profile span {
   font-size: 13px;
-  margin: 0 8px 0 0;
+  margin-right: 8px;
 }
+
+/* ---***---Search-box---***--- */
 
 .nav-top-mobile .search-box {
   position: relative;
@@ -95,17 +125,21 @@ body {
   height: 40px;
   padding: 0 40px 3px 0;
   outline: var(--color-button);
+  transition: all 0.3s;
+  box-shadow: 0 0 5px transparent;
 }
 
 .nav-top-mobile .search-box input::placeholder {
-  font-size: 15px;
+  font-size: 13px;
 }
 
 .nav-top-mobile .search-box input:focus {
   box-shadow: 0px 0px 5px var(--color-button);
 }
 
-/* ------------------------------------------------------------------------ */
+/* ------------------------------------Sidebar------------------------------------ */
+
+/* ---***---Sidebar-background---***--- */
 
 .div-sidebar {
   position: fixed;
@@ -113,16 +147,36 @@ body {
   height: 100%;
   background-color: rgba(196, 196, 196, 0.62);
   backdrop-filter: blur(25px);
+  transition: all 0.3s;
+  opacity: 0;
 }
+
+.div-sidebar.open {
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+/* ---***---Sidebar-menu---***--- */
 
 .div-sidebar .sidebar {
   position: relative;
   background: #fff;
   width: 239px;
   height: 100%;
-  right: 0px;
+  right: -1000px;
   padding: 90px 0;
+  transition: all 0.5s;
 }
+
+.sidebar.open {
+  right: 0px;
+}
+
+.sidebar .menu {
+  padding: 1em;
+}
+
+/* ---***---Sidebar-logo---***--- */
 
 .sidebar .logo-details {
   height: 3.75em;
@@ -136,66 +190,84 @@ body {
   width: 4.6em;
 }
 
-.sidebar .menu {
-  padding: 1em;
-}
+/* ---***---Sidebar-links---***--- */
+
+/* ***-Sidebar-links-link-*** */
 
 .sidebar .menu .menu-links .link {
   margin: 1.6em 0;
-  width: 100%;
+  transition: all 0.3s;
 }
 
-.sidebar .menu .menu-links .link a {
+/* ***-Sidebar-links-linkDetails-*** */
+.link_details {
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: var(--color-menu-button);
 }
 
+.sidebar .menu .menu-links .link a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* *-linkDetails-icon-* */
+
 .link_details .link_icon {
   margin: 0 0 0 10px;
-  font-size: 2em;
+  padding: 6px;
+  border-radius: 8px;
+  color: var(--color-menu-button);
+  transition: all 0.3s;
 }
+
+.link_details .link_icon i {
+  display: flex;
+  font-size: 23px;
+}
+
+/* *-linkDetails-name-* */
 
 .link_details .link_name {
-  position: relative;
   font-size: 0.8em;
-  top: -10px;
 }
 
-.sidebar .menu .menu-links .link a .link_arrow {
-  position: relative;
-  top: -4px;
-  transition: all 0.5;
+/* *-linkDetails-arrow-* */
+.link_arrow {
+  color: var(--color-menu-button);
 }
 
-.sidebar .menu .menu-links li a:hover .link_details .link_icon {
-  text-shadow: 0 0 2px rgba(128, 0, 255, 0.8);
-  color: var(--color-button);
-}
-
-.sidebar .menu .menu-links li a:hover {
-  color: var(--color-button);
-}
+/* ---***---Link-active---***--- */
 
 .sidebar .menu .menu-links .link.active {
   background: #eef5ff;
-  width: 186px;
+  width: 100%;
   padding: 10px;
   border-radius: 10px;
 }
 
+.link.active .link_details {
+  color: var(--color-button);
+}
+
 .link.active .link_details .link_icon {
-  text-shadow: 0 0 2px var(--c);
-  color: var(--c);
+  background-color: var(--color-button-opacity);
+  color: var(--color-button);
+  transform: rotate(15deg);
+  filter: blur(0.5px);
 }
 
 .link.active a .link_arrow {
   color: var(--color-button);
-  transform: translateY(-0.5vh) rotate(180deg);
+  transform: rotate(-90deg);
+  transition: all 0.2s;
 }
 
-.link .sub-menu {
+/* *-Sub-menu-* */
+
+.sub-menu {
   font-size: 0.75em;
   display: none;
 }
@@ -206,13 +278,12 @@ body {
 
 .link .sub-menu li {
   position: relative;
-  margin-right: 25px;
-
   margin: 10px 20px;
 }
 
-.link .sub-menu li:hover {
-  color: var(--color-button);
+.link .sub-menu li a {
+  color: var(--color-menu-button);
+  transition: all 0.5s;
 }
 
 .link .sub-menu li::before {
@@ -223,11 +294,51 @@ body {
   font-size: 1.5em;
 }
 
-.logout {
-  position: absolute;
+.link .sub-menu li.active a {
+  color: var(--color-button);
+  text-decoration: underline;
 }
 
-/* ------------------------------------------------------------------------ */
+.link .sub-menu li.active::before {
+  color: var(--color-button);
+}
+
+/* ---***---Sidebar-logout---***--- */
+
+.logout {
+  position: absolute;
+  width: 100%;
+  padding: 1em;
+  bottom: 80px;
+  transition: all 0.3s;
+}
+
+.logout a {
+  display: flex;
+  align-items: center;
+  color: #118102;
+  justify-content: start;
+  background-color: #11810236;
+  padding: 10px;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.logout.login a {
+  color: #7e0101;
+  background-color: #d103033d;
+}
+
+.logout a .logout_icon {
+  margin: 0 0 0 10px;
+}
+
+.logout .logout_icon i {
+  display: flex;
+  font-size: 23px;
+}
+
+/* ------------------------------------Footer------------------------------------ */
 
 .nav-bottom {
   position: fixed;
