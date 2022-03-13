@@ -284,6 +284,7 @@ body {
 .link .sub-menu li a {
   color: var(--color-menu-button);
   transition: all 0.5s;
+  white-space: nowrap;
 }
 
 .link .sub-menu li::before {
