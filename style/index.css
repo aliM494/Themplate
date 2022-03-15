@@ -8,6 +8,7 @@
   --color-back: rgba(244, 248, 250, 1);
   --color-button: rgba(128, 0, 255, 1);
   --color-button-opacity: rgba(128, 0, 255, 0.137);
+  --color-button-light: rgb(230, 207, 253);
   --color-menu-button: rgba(166, 166, 166, 1);
 }
 
@@ -51,7 +52,8 @@ body {
   height: 45px;
   border-radius: 10px;
   background: #ffffff;
-  box-shadow: 0 0 5px #7575758f;
+  /* box-shadow: 0 0 5px #7575758f; */
+  border: 1px solid #c7c7c767;
   overflow: hidden;
 }
 
@@ -126,7 +128,8 @@ body {
   height: 40px;
   padding: 0 40px 3px 0;
   outline: var(--color-button);
-  box-shadow: 0 0 5px #7575758f;
+  /* box-shadow: 0 0 5px #7575758f; */
+  border: 1px solid #c7c7c767;
   transition: all 0.3s;
 }
 
@@ -175,8 +178,8 @@ body {
 
 .sidebar .menu {
   padding: 1em;
-  max-height: 65%;
-  overflow: hidden;
+  max-height: 70%;
+  overflow-y: scroll;
 }
 
 /* ---***---Sidebar-logo---***--- */
@@ -358,21 +361,23 @@ body {
 .nav-bottom a {
   font-size: 1.5em;
   color: var(--color-button);
-}
-
-.nav-bottom a.active {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px;
-  margin-bottom: 10px;
+}
+
+.nav-bottom a.active {
   animation: bounce 1s;
 }
 
-.nav-bottom a.active i {
+.nav-bottom a i {
   display: flex;
   padding: 10px;
-  color: #fff;
-  background-color: var(--color-button);
-  border-radius: 10px;
+  border-radius: 15px;
+}
+
+.nav-bottom a.active i {
+  color: var(--color-button);
+  background-color: var(--color-button-light);
 }

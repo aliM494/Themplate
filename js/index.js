@@ -1,5 +1,3 @@
-import { activeLink } from "./utility";
-
 // -------------------open-sidebar-------------------
 const btnMenu = document.querySelector(".div-hamburger");
 const sidebar = document.querySelector(".sidebar");
@@ -22,11 +20,16 @@ document.addEventListener("click", (e) => {
 // -------------------sub-menu-------------------
 
 const menu = document.querySelector(".menu");
+const a_Links = document.querySelectorAll(".a-link");
 const link_all = document.querySelectorAll(".link");
 const subMenu_links = document.querySelectorAll(".s-link");
 
-link_all.forEach((li) => {
-  li.addEventListener("click", () => activeLink(li, link_all, menu, true));
+a_Links.forEach((a) => {
+  a.addEventListener("click", () => {
+    const a_parent = a.parentNode;
+
+    activeLink(a_parent, link_all, menu, true);
+  });
 });
 
 subMenu_links.forEach((li) => {
