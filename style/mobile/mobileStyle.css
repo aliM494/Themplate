@@ -1,34 +1,4 @@
-@font-face {
-  font-family: "iranSans";
-  src: url("../fonts/IRANSansX-Bold.ttf");
-}
-
-:root {
-  --color-menu: rgba(235, 243, 255, 1);
-  --color-back: rgba(244, 248, 250, 1);
-  --color-button: rgba(128, 0, 255, 1);
-  --color-button-opacity: rgba(128, 0, 255, 0.137);
-  --color-button-light: rgb(230, 207, 253);
-  --color-menu-button: rgba(166, 166, 166, 1);
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-body {
-  background-color: var(--color-back);
-  font-family: "iranSans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* ------------------------------------Header------------------------------------ */
+/* ----------------------------- Header ----------------------------- */
 
 .nav-top-mobile {
   position: fixed;
@@ -48,8 +18,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 45px;
-  height: 45px;
+  width: 2.8em;
+  height: 2.8em;
   border-radius: 10px;
   background: #ffffff;
   /* box-shadow: 0 0 5px #7575758f; */
@@ -63,13 +33,7 @@ body {
   border: 0.5px solid var(--color-button);
   background: var(--color-button);
   border-radius: 60px;
-  transition: 0.5s;
-}
-
-.div-hamburger.active span {
-  border: 0.5px solid #c90101;
-  transition-delay: 0.125ms;
-  transition: 0.5s;
+  transition: 0.5s 0.125ms;
 }
 
 .div-hamburger.active span:nth-child(1) {
@@ -79,7 +43,6 @@ body {
 .div-hamburger.active span:nth-child(2) {
   transform: translateX(100px);
   opacity: 0;
-  transition: 0.5s;
 }
 
 .div-hamburger.active span:nth-child(3) {
@@ -141,7 +104,7 @@ body {
   box-shadow: 0px 0px 5px var(--color-button);
 }
 
-/* ------------------------------------Sidebar------------------------------------ */
+/* ----------------------------- Sidebar ----------------------------- */
 
 /* ---***---Sidebar-background---***--- */
 
@@ -345,7 +308,7 @@ body {
   font-size: 23px;
 }
 
-/* ------------------------------------Footer------------------------------------ */
+/* ----------------------------- Footer ----------------------------- */
 
 .nav-bottom {
   position: fixed;
