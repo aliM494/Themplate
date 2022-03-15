@@ -1,3 +1,5 @@
+import { activeLink } from "./utility";
+
 // -------------------open-sidebar-------------------
 const btnMenu = document.querySelector(".div-hamburger");
 const sidebar = document.querySelector(".sidebar");
@@ -19,18 +21,12 @@ document.addEventListener("click", (e) => {
 
 // -------------------sub-menu-------------------
 
+const menu = document.querySelector(".menu");
 const link_all = document.querySelectorAll(".link");
 const subMenu_links = document.querySelectorAll(".s-link");
 
-function activeLink(element, elemnts) {
-  elemnts.forEach((li) => {
-    li.classList.remove("active");
-  });
-  element.classList.add("active");
-}
-
 link_all.forEach((li) => {
-  li.addEventListener("click", () => activeLink(li, link_all));
+  li.addEventListener("click", () => activeLink(li, link_all, menu, true));
 });
 
 subMenu_links.forEach((li) => {
@@ -39,8 +35,21 @@ subMenu_links.forEach((li) => {
 
 // -------------------Login-------------------
 
-const logIn = document.querySelector(".logout");
+const logIn = document.querySelector(".logout"),
+  logIn_name = logIn.querySelector(".logout_name");
 
 logIn.addEventListener("click", () => {
   logIn.classList.toggle("login");
+  logIn_name.innerHTML = "ورود به حساب";
+});
+
+// -------------------Nav-bottom-------------------
+
+const navBottom = document.querySelectorAll(".nav-bottom"),
+  navLink = document.querySelectorAll(".nav-bottom a");
+
+navLink.forEach((nl) => {
+  nl.addEventListener("click", () => {
+    activeLink(nl, navLink, navBottom);
+  });
 });

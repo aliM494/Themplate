@@ -17,6 +17,12 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
     />
 
+    <!-- link-css-animate.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
     <!-- link-style -->
     <link rel="stylesheet" href="./style/index.css" />
   </head>
@@ -27,7 +33,7 @@
         class="nav-top-mobile d-flex justify-content-around align-items-center"
       >
         <div
-          class="col-1 d-flex justify-content-center div-hamburger"
+          class="col-1 d-flex justify-content-center div-hamburger me-1"
           onclick="openSidebar()"
         >
           <span></span>
@@ -40,7 +46,7 @@
           <span>علی موسوی</span>
         </div>
 
-        <div class="col-5 search-box">
+        <div class="col-5 ms-1 search-box">
           <span><i class="bi bi-search"></i></span>
           <input type="text" placeholder="جستجو..." />
         </div>
@@ -50,7 +56,9 @@
     <div class="div-sidebar">
       <nav class="sidebar">
         <div class="logo-details">
-          <img src="./Images/logo.png" class="img-fluid" alt="" />
+          <a href="https://codeyad.com/" target="_blank">
+            <img src="./Images/logo.png" class="img-fluid" alt="" />
+          </a>
         </div>
 
         <div class="menu">
@@ -112,7 +120,7 @@
                   <span style="--c: rgba(6, 188, 24, 0.67)" class="link_icon"
                     ><i class="bi bi-people"></i
                   ></span>
-                  <span class="link_name">کار بران و همکاران</span>
+                  <span class="link_name">کاربران و همکاران</span>
                 </div>
                 <span class="link_arrow">
                   <i class="bi bi-caret-left-fill"></i>
@@ -125,22 +133,50 @@
                 <li class="s-link"><a href="#">مجوزها</a></li>
               </ul>
             </li>
+            <li class="link">
+              <a href="#">
+                <div class="link_details">
+                  <span style="--c: rgba(6, 188, 24, 0.67)" class="link_icon"
+                    ><i class="bi bi-chat-dots"></i
+                  ></span>
+                  <span class="link_name">ارتباطات</span>
+                </div>
+                <span class="link_arrow">
+                  <i class="bi bi-caret-left-fill"></i>
+                </span>
+              </a>
+
+              <ul class="sub-menu">
+                <li class="s-link"><a href="#">سوال ها</a></li>
+                <li class="s-link"><a href="#">نظرات</a></li>
+              </ul>
+            </li>
           </ul>
         </div>
 
         <div class="logout">
           <a href="#">
             <span class="logout_icon">
-              <i class="bi bi-box-arrow-in-right"></i>
+              <i class="bi bi-person"></i>
             </span>
-            <span class="logout_name">ورود به حساب</span>
+            <span class="logout_name">خروج به حساب</span>
           </a>
         </div>
       </nav>
     </div>
 
     <footer>
-      <nav class="nav-bottom"></nav>
+      <nav class="nav-bottom text-center d-flex align-items-center">
+        <a href="#" class="col-4 animate__animated"
+          ><i class="bi bi-moon"></i
+        ></a>
+        <a href="#" class="col-4 animate__animated"
+          ><i class="bi bi-bell"></i
+        ></a>
+        <a href="#" class="col-4 animate__animated"
+          ><i class="bi bi-grid"></i
+        ></a>
+      </nav>
     </footer>
 
     <!-- link-js-bootstrap -->
@@ -149,6 +185,6 @@
     <script src="./bootstrap/js/bootstrap.bundle.js"></script>
 
     <!-- link-js -->
-    <script src="./js/index.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>
