@@ -1,192 +1,275 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="Images/logo.ico" />
-    <title>پنل مدیریت</title>
 
-    <!-- link-css-bootstrap -->
-    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css" />
-    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./bootstrap/css/bootstrap-grid.css" />
-    <link rel="stylesheet" href="./bootstrap/css/bootstrap-reboot.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="Images/logo.ico" />
+  <title>پنل مدیریت</title>
 
-    <!-- link-css-animate.css -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
+  <!-- link-css-bootstrap -->
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.css" />
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap-grid.css" />
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap-reboot.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
 
-    <!-- link-style -->
-    <link rel="stylesheet" href="./style/main.css" />
-    <link rel="stylesheet" href="./style/mobile/mobileStyle.css" />
-  </head>
+  <!-- link-css-animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-  <body>
-    <header>
-      <nav
-        class="nav-top-mobile d-flex justify-content-around align-items-center"
-      >
-        <div
-          class="col-1 d-flex justify-content-center div-hamburger me-1"
-          onclick="openSidebar()"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+  <!-- link-style -->
+  <link rel="stylesheet" href="./style/main.css" />
+  <link rel="stylesheet" href="./style/mobile/mobileStyle.css" />
+</head>
 
-        <div class="col-5 profile">
-          <img src="Images/profile.png" />
-          <span>علی موسوی</span>
-        </div>
+<body>
+  <header>
+    <nav class="nav-top-mobile d-flex justify-content-around align-items-center">
+      <div class="col-1 d-flex justify-content-center div-hamburger me-1" onclick="openSidebar()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
 
-        <div class="col-5 ms-1 search-box">
-          <span><i class="bi bi-search"></i></span>
-          <input type="text" placeholder="جستجو..." />
-        </div>
-      </nav>
-    </header>
+      <div class="col-5 profile">
+        <img src="Images/profile.png" />
+        <span>علی موسوی</span>
+      </div>
 
-    <div class="div-sidebar">
-      <nav class="sidebar">
-        <div class="logo-details">
-          <a href="https://codeyad.com/" target="_blank">
-            <img src="./Images/logo.png" class="img-fluid" alt="" />
-          </a>
-        </div>
+      <div class="col-5 ms-1 search-box">
+        <span><i class="bi bi-search"></i></span>
+        <input type="text" placeholder="جستجو..." />
+      </div>
+    </nav>
+  </header>
 
-        <div class="menu">
-          <ul class="menu-links">
-            <li class="link">
-              <a href="#" class="a-link">
-                <div class="link_details">
-                  <span class="link_icon">
-                    <i class="bi bi-columns-gap"></i>
-                  </span>
-                  <span class="link_name">داشبورد</span>
-                </div>
-              </a>
-            </li>
-            <li class="link">
-              <a href="#" class="a-link">
-                <div class="link_details">
-                  <span class="link_icon">
-                    <i class="bi bi-cart"></i>
-                  </span>
-                  <span class="link_name">فروشگاه</span>
-                </div>
-                <span class="link_arrow">
-                  <i class="bi bi-caret-left-fill"></i>
+  <div class="div-sidebar">
+    <nav class="sidebar">
+      <div class="logo-details">
+        <a href="https://codeyad.com/" target="_blank">
+          <img src="./Images/logo.png" class="img-fluid" alt="" />
+        </a>
+      </div>
+
+      <div class="menu">
+        <ul class="menu-links">
+          <li class="link">
+            <a href="#" class="a-link">
+              <div class="link_details">
+                <span class="link_icon">
+                  <i class="bi bi-columns-gap"></i>
                 </span>
-              </a>
-
-              <ul class="sub-menu">
-                <li class="s-link"><a href="#">مدیریت گروه محصولات</a></li>
-                <li class="s-link"><a href="#">مدیریت محصول</a></li>
-                <li class="s-link"><a href="#">مدیریت برند ها</a></li>
-                <li class="s-link"><a href="#">مدیریت گارانتی ها</a></li>
-                <li class="s-link"><a href="#">مدیریت رنگ ها</a></li>
-                <li class="s-link"><a href="#">مدیریت تخفیف ها</a></li>
-              </ul>
-            </li>
-            <li class="link">
-              <a href="#" class="a-link">
-                <div class="link_details">
-                  <span style="--c: rgba(6, 188, 24, 0.67)" class="link_icon"
-                    ><i class="bi bi-basket"></i
-                  ></span>
-                  <span class="link_name">سفارشات و سبد</span>
-                </div>
-                <span class="link_arrow">
-                  <i class="bi bi-caret-left-fill"></i>
+                <span class="link_name">داشبورد</span>
+              </div>
+            </a>
+          </li>
+          <li class="link">
+            <a href="#" class="a-link">
+              <div class="link_details">
+                <span class="link_icon">
+                  <i class="bi bi-cart"></i>
                 </span>
-              </a>
+                <span class="link_name">فروشگاه</span>
+              </div>
+              <span class="link_arrow">
+                <i class="bi bi-caret-left-fill"></i>
+              </span>
+            </a>
 
-              <ul class="sub-menu">
-                <li class="s-link"><a href="#">مدیریت سبد ها</a></li>
-                <li class="s-link"><a href="#">مدیریت سفارشات</a></li>
-                <li class="s-link"><a href="#">مدیریت نحوه ارسال</a></li>
-              </ul>
-            </li>
-            <li class="link">
-              <a href="#" class="a-link">
-                <div class="link_details">
-                  <span style="--c: rgba(6, 188, 24, 0.67)" class="link_icon"
-                    ><i class="bi bi-people"></i
-                  ></span>
-                  <span class="link_name">کاربران و همکاران</span>
-                </div>
-                <span class="link_arrow">
-                  <i class="bi bi-caret-left-fill"></i>
-                </span>
-              </a>
+            <ul class="sub-menu">
+              <li class="s-link"><a href="#">مدیریت گروه محصولات</a></li>
+              <li class="s-link"><a href="#">مدیریت محصول</a></li>
+              <li class="s-link"><a href="#">مدیریت برند ها</a></li>
+              <li class="s-link"><a href="#">مدیریت گارانتی ها</a></li>
+              <li class="s-link"><a href="#">مدیریت رنگ ها</a></li>
+              <li class="s-link"><a href="#">مدیریت تخفیف ها</a></li>
+            </ul>
+          </li>
+          <li class="link">
+            <a href="#" class="a-link">
+              <div class="link_details">
+                <span style="--c: rgba(6, 188, 24, 0.67)" class="link_icon"><i class="bi bi-basket"></i></span>
+                <span class="link_name">سفارشات و سبد</span>
+              </div>
+              <span class="link_arrow">
+                <i class="bi bi-caret-left-fill"></i>
+              </span>
+            </a>
 
-              <ul class="sub-menu">
-                <li class="s-link"><a href="#">مشاهده کاربران</a></li>
-                <li class="s-link"><a href="#">نقش ها</a></li>
-                <li class="s-link"><a href="#">مجوزها</a></li>
-              </ul>
-            </li>
-            <li class="link">
-              <a href="#" class="a-link">
-                <div class="link_details">
-                  <span style="--c: rgba(6, 188, 24, 0.67)" class="link_icon"
-                    ><i class="bi bi-chat-dots"></i
-                  ></span>
-                  <span class="link_name">ارتباطات</span>
-                </div>
-                <span class="link_arrow">
-                  <i class="bi bi-caret-left-fill"></i>
-                </span>
-              </a>
+            <ul class="sub-menu">
+              <li class="s-link"><a href="#">مدیریت سبد ها</a></li>
+              <li class="s-link"><a href="#">مدیریت سفارشات</a></li>
+              <li class="s-link"><a href="#">مدیریت نحوه ارسال</a></li>
+            </ul>
+          </li>
+          <li class="link">
+            <a href="#" class="a-link">
+              <div class="link_details">
+                <span style="--c: rgba(6, 188, 24, 0.67)" class="link_icon"><i class="bi bi-people"></i></span>
+                <span class="link_name">کاربران و همکاران</span>
+              </div>
+              <span class="link_arrow">
+                <i class="bi bi-caret-left-fill"></i>
+              </span>
+            </a>
 
-              <ul class="sub-menu">
-                <li class="s-link"><a href="#">سوال ها</a></li>
-                <li class="s-link"><a href="#">نظرات</a></li>
-              </ul>
-            </li>
-          </ul>
+            <ul class="sub-menu">
+              <li class="s-link"><a href="#">مشاهده کاربران</a></li>
+              <li class="s-link"><a href="#">نقش ها</a></li>
+              <li class="s-link"><a href="#">مجوزها</a></li>
+            </ul>
+          </li>
+          <li class="link">
+            <a href="#" class="a-link">
+              <div class="link_details">
+                <span style="--c: rgba(6, 188, 24, 0.67)" class="link_icon"><i class="bi bi-chat-dots"></i></span>
+                <span class="link_name">ارتباطات</span>
+              </div>
+              <span class="link_arrow">
+                <i class="bi bi-caret-left-fill"></i>
+              </span>
+            </a>
+
+            <ul class="sub-menu">
+              <li class="s-link"><a href="#">سوال ها</a></li>
+              <li class="s-link"><a href="#">نظرات</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="logout">
+        <a href="#">
+          <span class="logout_icon">
+            <i class="bi bi-person"></i>
+          </span>
+          <span class="logout_name">خروج به حساب</span>
+        </a>
+      </div>
+    </nav>
+  </div>
+
+  <main>
+    <div class="infos col-12 mb-4">
+      <div class="infos_card d-flex justify-content-between income_info">
+        <div class="card_details d-flex flex-column">
+
+          <div class="details_today d-flex flex-column">
+            <span class="today_count">15000000</span>
+            <span class="today_title">در آمد امروز</span>
+            <span class="today_description">جمع مبالغ پرداختی(تومان)</span>
+          </div>
+
+          <hr />
+
+          <div class="details_lastWeack">
+            <span class="lastWeack_count">6380000</span>
+            <span class="lastWeack_description">در هفته گذشته</span>
+          </div>
+
+          <div class="details_lastMounth">
+            <span class="lastMounth_count">22480000</span>
+            <span class="lastMounth_description">در ماه گذشته</span>
+          </div>
+
         </div>
+        <span class="card_icon"><i class="bi bi-credit-card d-flex"></i></span>
+      </div>
 
-        <div class="logout">
-          <a href="#">
-            <span class="logout_icon">
-              <i class="bi bi-person"></i>
-            </span>
-            <span class="logout_name">خروج به حساب</span>
-          </a>
+      <div class="infos_card d-flex justify-content-between col-12 mt-4 orders_info">
+        <div class="card_details d-flex flex-column">
+
+          <div class="details_today d-flex flex-column">
+            <span class="today_count">45</span>
+            <span class="today_title">سفارشات امروز</span>
+            <span class="today_description">سفارشات کامل ودارای پرداختی</span>
+          </div>
+
+          <hr />
+
+          <div class="details_lastWeack">
+            <span class="lastWeack_count">236</span>
+            <span class="lastWeack_description">در هفته گذشته</span>
+          </div>
+
+          <div class="details_lastMounth">
+            <span class="lastMounth_count">1038</span>
+            <span class="lastMounth_description">در ماه گذشته</span>
+          </div>
+
         </div>
-      </nav>
+        <span class="card_icon"><i class="bi bi-receipt d-flex"></i></span>
+      </div>
+
+      <div class="infos_card d-flex justify-content-between col-12 mt-4 suspended_orders_info">
+        <div class="card_details d-flex flex-column">
+
+          <div class="details_today d-flex flex-column">
+            <span class="today_count">5</span>
+            <span class="today_title">سفارشات مانده امروز</span>
+            <span class="today_description">سفارشات معلق و فاقد پرداختی</span>
+          </div>
+
+          <hr />
+
+          <div class="details_lastWeack">
+            <span class="lastWeack_count">9</span>
+            <span class="lastWeack_description">در هفته گذشته</span>
+          </div>
+
+          <div class="details_lastMounth">
+            <span class="lastMounth_count">16</span>
+            <span class="lastMounth_description">در ماه گذشته</span>
+          </div>
+
+        </div>
+        <span class="card_icon"><i class="bi bi-shop d-flex"></i></span>
+      </div>
+
+      <div class="infos_card d-flex justify-content-between col-12 mt-4 cart_info">
+        <div class="card_details d-flex flex-column">
+
+          <div class="details_today d-flex flex-column">
+            <span class="today_count">7</span>
+            <span class="today_title">سبد خرید امروز</span>
+            <span class="today_description">سبد های خرید امروز</span>
+          </div>
+
+          <hr />
+
+          <div class="details_lastWeack">
+            <span class="lastWeack_count">13</span>
+            <span class="lastWeack_description">در هفته گذشته</span>
+          </div>
+
+          <div class="details_lastMounth">
+            <span class="lastMounth_count">18</span>
+            <span class="lastMounth_description">در ماه گذشته</span>
+          </div>
+
+        </div>
+        <span class="card_icon"><i class="bi bi-basket2 d-flex"></i></span>
+      </div>
     </div>
+  </main>
 
-    <footer>
-      <nav class="nav-bottom text-center d-flex align-items-center">
-        <a href="#" class="col-4 animate__animated"
-          ><i class="bi bi-moon"></i
-        ></a>
-        <a href="#" class="col-4 animate__animated"
-          ><i class="bi bi-bell"></i
-        ></a>
-        <a href="#" class="col-4 animate__animated"
-          ><i class="bi bi-grid"></i
-        ></a>
-      </nav>
-    </footer>
+  <footer>
+    <nav class="nav-bottom text-center d-flex align-items-center">
+      <a href="#" class="col-4 animate__animated"><i class="bi bi-moon"></i></a>
+      <a href="#" class="col-4 animate__animated"><i class="bi bi-bell"></i></a>
+      <a href="#" class="col-4 animate__animated"><i class="bi bi-grid"></i></a>
+    </nav>
+  </footer>
 
-    <!-- link-js-bootstrap -->
-    <script src="./bootstrap/js/bootstrap.js"></script>
-    <script src="./bootstrap/js/bootstrap.min.js"></script>
-    <script src="./bootstrap/js/bootstrap.bundle.js"></script>
+  <!-- link-js-bootstrap -->
+  <script src="./bootstrap/js/bootstrap.js"></script>
+  <script src="./bootstrap/js/bootstrap.min.js"></script>
+  <script src="./bootstrap/js/bootstrap.bundle.js"></script>
 
-    <!-- link-js -->
-    <script src="js/utility.js"></script>
-    <script src="js/index.js"></script>
-  </body>
+  <!-- link-js -->
+  <script src="js/utility.js"></script>
+  <script src="js/index.js"></script>
+</body>
+
 </html>

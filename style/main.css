@@ -11,6 +11,13 @@
   src: url("../fonts/IRANSansX-Bold.ttf");
 }
 
+/*  Sepahbod  */
+
+@font-face {
+  font-family: "sepahbod";
+  src: url("../fonts/Sepahbod.otf");
+}
+
 /* -----Color Palets-----*/
 
 :root {
@@ -20,6 +27,8 @@
   --color-button-opacity: rgba(128, 0, 255, 0.137);
   --color-button-light: rgb(230, 207, 253);
   --color-menu-button: rgba(166, 166, 166, 1);
+  --main-box-out-shadow: -14px -14px 20px #FFFFFF, 14px 14px 20px rgba(0, 0, 0, 0.11);
+  --main-box-inner-shadow: inset -8px -8px 10px #fff, inset 8px 8px 10px rgba(0, 0, 0, 0.11);
 }
 
 /* -----Reset-----*/
@@ -41,4 +50,84 @@ body {
     sans-serif;
 
   font-weight: 400;
+}
+
+/* -------------------------------Main-Content------------------------------- */
+
+main {
+  margin: 5.5rem 1em;
+}
+
+/* -------------------Infos------------------- */
+
+
+main .infos .infos_card {
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: var(--main-box-out-shadow);
+}
+
+.today_count, .lastWeack_count, .lastMounth_count {
+  font-family: "sepahbod", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 1.5px;
+  color: rgba(66, 66, 66, 1);
+}
+
+.infos_card .card_details .details_today {
+  font-size: 13px;
+}
+
+.infos_card .card_details .details_today span {
+  margin: 3px 0;
+}
+
+.infos_card .card_details .details_today .today_count {
+  font-size: 18px;
+}
+
+.infos_card .card_details hr {
+  width: 15em;
+  border: 1px solid rgb(73, 73, 73);
+}
+
+.card_details .details_lastWeack, .card_details .details_lastMounth {
+  font-size: 10px;
+  color: rgba(66, 66, 66, 0.74);
+}
+
+.infos_card .card_icon {
+  font-size: 2.5em;
+}
+
+.income_info {
+  background: linear-gradient(108.82deg, #A1DFFE 3.48%, #9FBCE9 95.45%);
+}
+
+.income_info .card_icon {
+  color: #0060F1;
+}
+
+.orders_info {
+  background: linear-gradient(111.31deg, #92FFA3 4.28%, #A8FFE5 98.2%);
+}
+
+.orders_info .card_icon {
+  color: #04AB0B;
+}
+
+.suspended_orders_info {
+  background: linear-gradient(109.77deg, #FFA0A0 4.38%, #FFD18B 97.03%);
+
+}
+
+.suspended_orders_info .card_icon {
+  color: #FF0202;
+}
+
+.cart_info {
+  background: linear-gradient(108.68deg, #DDB1FF 4.53%, #F9A3CC 96.42%);
+}
+
+.cart_info .card_icon {
+  color: #B80390;
 }
