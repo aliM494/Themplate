@@ -1,17 +1,11 @@
 /* -----Fonts----- */
 
-/*  Poppins  */
-
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,300&display=swap");
-
-/*  IranSans  */
 
 @font-face {
   font-family: "iranSans";
   src: url("../fonts/IRANSansX-Bold.ttf");
 }
-
-/*  Sepahbod  */
 
 @font-face {
   font-family: "sepahbod";
@@ -55,15 +49,16 @@ body {
 /* -------------------------------Main-Content------------------------------- */
 
 main {
-  margin: 4.5rem 1em;
+  margin: 4.5rem 0.5rem;
 }
 
 /* -------------------Infos------------------- */
 
 main .infos .infos_card {
-  padding: 25px;
-  border-radius: 20px;
+  padding: 24px;
+  border-radius: 16px;
   box-shadow: var(--main-box-out-shadow);
+  margin: 16px 8px;
 }
 
 .today_count, .lastWeack_count, .lastMounth_count {
@@ -73,7 +68,8 @@ main .infos .infos_card {
 }
 
 .infos_card .card_details .details_today {
-  font-size: 13px;
+  font-size: 0.75em;
+  white-space: nowrap;
 }
 
 .infos_card .card_details .details_today span {
@@ -81,11 +77,11 @@ main .infos .infos_card {
 }
 
 .infos_card .card_details .details_today .today_count {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .infos_card .card_details hr {
-  width: 15em;
+  width: 140px;
   border: 1px solid rgb(73, 73, 73);
 }
 
@@ -97,6 +93,8 @@ main .infos .infos_card {
 .infos_card .card_icon {
   font-size: 2.5em;
 }
+
+/*-----Info-Box-Color-----*/
 
 .income_info {
   background: linear-gradient(108.82deg, #A1DFFE 3.48%, #9FBCE9 95.45%);
