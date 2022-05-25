@@ -54,7 +54,7 @@ main {
 
 /* -------------------Infos------------------- */
 
-main .infos .infos_card {
+main .cards-info .card-div {
   padding: 24px;
   border-radius: 16px;
   box-shadow: var(--main-box-out-shadow);
@@ -67,20 +67,20 @@ main .infos .infos_card {
   color: rgba(66, 66, 66, 1);
 }
 
-.infos_card .card_details .details_today {
+.card-div .card_details .details_today {
   font-size: 0.75em;
   white-space: nowrap;
 }
 
-.infos_card .card_details .details_today span {
+.card-div .card_details .details_today span {
   margin: 3px 0;
 }
 
-.infos_card .card_details .details_today .today_count {
+.card-div .card_details .details_today .today_count {
   font-size: 16px;
 }
 
-.infos_card .card_details hr {
+.card-div .card_details hr {
   width: 140px;
   border: 1px solid rgb(73, 73, 73);
 }
@@ -90,7 +90,7 @@ main .infos .infos_card {
   color: rgba(66, 66, 66, 0.74);
 }
 
-.infos_card .card_icon {
+.card-div .card_icon {
   font-size: 2.5em;
 }
 

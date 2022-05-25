@@ -1,4 +1,5 @@
-// -------------------open-sidebar-------------------
+//#region Open-sidebar
+
 const btnMenu = document.querySelector(".div-hamburger");
 const sidebar = document.querySelector(".sidebar");
 const divSidebar = document.querySelector(".div-sidebar");
@@ -17,7 +18,9 @@ document.addEventListener("click", (e) => {
   }
 });
 
-// -------------------sub-menu-------------------
+//#endregion open-sidebar
+
+//#region Sub-menu
 
 const menu = document.querySelector(".menu");
 const a_Links = document.querySelectorAll(".a-link");
@@ -36,7 +39,9 @@ subMenu_links.forEach((li) => {
   li.addEventListener("click", () => activeLink(li, subMenu_links));
 });
 
-// -------------------Login-------------------
+//#endregion sub-menu
+
+//#region Login
 
 const logIn = document.querySelector(".logout"),
   logIn_name = logIn.querySelector(".logout_name");
@@ -46,7 +51,9 @@ logIn.addEventListener("click", () => {
   logIn_name.innerHTML = "ورود به حساب";
 });
 
-// -------------------Nav-bottom-------------------
+//#endregion Login
+
+//#region Nav-bottom
 
 const navBottom = document.querySelectorAll(".nav-bottom"),
   navLink = document.querySelectorAll(".nav-bottom a");
@@ -56,3 +63,13 @@ navLink.forEach((nl) => {
     activeLink(nl, navLink, navBottom);
   });
 });
+
+//#endregion Nav-bottom
+
+//#region Chart
+
+
+
+//#endregion Chart
+
+

@@ -1,3 +1,5 @@
+//#region Active Link
+
 const activeLink = (element, collection, parent = null, selfClose = false) => {
   if (selfClose && element.classList.contains("active")) {
     element.classList.remove("active");
@@ -18,3 +20,6 @@ const activeLink = (element, collection, parent = null, selfClose = false) => {
     element.classList.add("active");
   }
 };
+
+
+//#endregion Active Link

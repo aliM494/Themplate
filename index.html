@@ -155,123 +155,135 @@
   </div>
   <!-- #endregion Sidebar-->
 
-  <!-- #region Main-Section -->
   <main>
-    <div class="infos d-flex justify-content-center align-items-center flex-wrap">
 
-      <div class="col-11 col-md-6 col-lg-3">
-        <div class="infos_card d-flex justify-content-between income_info">
-          <div class="card_details d-flex flex-column">
+    <!-- #region Dashboard-->
 
-            <div class="details_today d-flex flex-column">
-              <span class="today_count">15000000</span>
-              <span class="today_title">در آمد امروز</span>
-              <span class="today_description">جمع مبالغ پرداختی(تومان)</span>
+    <div class="dashboard">
+
+      <div class="cards-info">
+        <div class="d-flex justify-content-center align-items-center flex-wrap">
+
+          <div class="col-11 col-md-6 col-lg-3">
+            <div class="card-div d-flex justify-content-between income_info">
+              <div class="card_details d-flex flex-column">
+
+                <div class="details_today d-flex flex-column">
+                  <span class="today_count">15000000</span>
+                  <span class="today_title">در آمد امروز</span>
+                  <span class="today_description">جمع مبالغ پرداختی(تومان)</span>
+                </div>
+
+                <hr />
+
+                <div class="details_lastWeack">
+                  <span class="lastWeack_count">6380000</span>
+                  <span class="lastWeack_description">در هفته گذشته</span>
+                </div>
+
+                <div class="details_lastMounth">
+                  <span class="lastMounth_count">22480000</span>
+                  <span class="lastMounth_description">در ماه گذشته</span>
+                </div>
+
+              </div>
+              <span class="card_icon"><i class="bi bi-credit-card d-flex"></i></span>
             </div>
-
-            <hr />
-
-            <div class="details_lastWeack">
-              <span class="lastWeack_count">6380000</span>
-              <span class="lastWeack_description">در هفته گذشته</span>
-            </div>
-
-            <div class="details_lastMounth">
-              <span class="lastMounth_count">22480000</span>
-              <span class="lastMounth_description">در ماه گذشته</span>
-            </div>
-
           </div>
-          <span class="card_icon"><i class="bi bi-credit-card d-flex"></i></span>
+
+          <div class="col-11 col-md-6 col-lg-3">
+            <div class="card-div d-flex justify-content-between orders_info">
+              <div class="card_details d-flex flex-column">
+
+                <div class="details_today d-flex flex-column">
+                  <span class="today_count">45</span>
+                  <span class="today_title">سفارشات امروز</span>
+                  <span class="today_description">سفارشات کامل ودارای پرداختی</span>
+                </div>
+
+                <hr />
+
+                <div class="details_lastWeack">
+                  <span class="lastWeack_count">236</span>
+                  <span class="lastWeack_description">در هفته گذشته</span>
+                </div>
+
+                <div class="details_lastMounth">
+                  <span class="lastMounth_count">1038</span>
+                  <span class="lastMounth_description">در ماه گذشته</span>
+                </div>
+
+              </div>
+              <span class="card_icon"><i class="bi bi-receipt d-flex"></i></span>
+            </div>
+          </div>
+
+          <div class="col-11 col-md-6 col-lg-3">
+            <div class="card-div d-flex justify-content-between suspended_orders_info">
+              <div class="card_details d-flex flex-column">
+
+                <div class="details_today d-flex flex-column">
+                  <span class="today_count">5</span>
+                  <span class="today_title">سفارشات مانده امروز</span>
+                  <span class="today_description">سفارشات معلق و فاقد پرداختی</span>
+                </div>
+
+                <hr />
+
+                <div class="details_lastWeack">
+                  <span class="lastWeack_count">9</span>
+                  <span class="lastWeack_description">در هفته گذشته</span>
+                </div>
+
+                <div class="details_lastMounth">
+                  <span class="lastMounth_count">16</span>
+                  <span class="lastMounth_description">در ماه گذشته</span>
+                </div>
+
+              </div>
+              <span class="card_icon"><i class="bi bi-shop-window d-flex"></i></span>
+            </div>
+          </div>
+
+          <div class="col-11 col-md-6 col-lg-3">
+            <div class="card-div d-flex justify-content-between cart_info">
+              <div class="card_details d-flex flex-column">
+
+                <div class="details_today d-flex flex-column">
+                  <span class="today_count">7</span>
+                  <span class="today_title">سبد خرید امروز</span>
+                  <span class="today_description">سبد های خرید امروز</span>
+                </div>
+
+                <hr />
+
+                <div class="details_lastWeack">
+                  <span class="lastWeack_count">13</span>
+                  <span class="lastWeack_description">در هفته گذشته</span>
+                </div>
+
+                <div class="details_lastMounth">
+                  <span class="lastMounth_count">18</span>
+                  <span class="lastMounth_description">در ماه گذشته</span>
+                </div>
+
+              </div>
+              <span class="card_icon"><i class="bi bi-basket d-flex"></i></span>
+            </div>
+          </div>
+
         </div>
       </div>
 
-      <div class="col-11 col-md-6 col-lg-3">
-        <div class="infos_card d-flex justify-content-between orders_info">
-          <div class="card_details d-flex flex-column">
+      <div class="details">
 
-            <div class="details_today d-flex flex-column">
-              <span class="today_count">45</span>
-              <span class="today_title">سفارشات امروز</span>
-              <span class="today_description">سفارشات کامل ودارای پرداختی</span>
-            </div>
-
-            <hr />
-
-            <div class="details_lastWeack">
-              <span class="lastWeack_count">236</span>
-              <span class="lastWeack_description">در هفته گذشته</span>
-            </div>
-
-            <div class="details_lastMounth">
-              <span class="lastMounth_count">1038</span>
-              <span class="lastMounth_description">در ماه گذشته</span>
-            </div>
-
-          </div>
-          <span class="card_icon"><i class="bi bi-receipt d-flex"></i></span>
-        </div>
       </div>
-
-      <div class="col-11 col-md-6 col-lg-3">
-        <div class="infos_card d-flex justify-content-between suspended_orders_info">
-          <div class="card_details d-flex flex-column">
-
-            <div class="details_today d-flex flex-column">
-              <span class="today_count">5</span>
-              <span class="today_title">سفارشات مانده امروز</span>
-              <span class="today_description">سفارشات معلق و فاقد پرداختی</span>
-            </div>
-
-            <hr />
-
-            <div class="details_lastWeack">
-              <span class="lastWeack_count">9</span>
-              <span class="lastWeack_description">در هفته گذشته</span>
-            </div>
-
-            <div class="details_lastMounth">
-              <span class="lastMounth_count">16</span>
-              <span class="lastMounth_description">در ماه گذشته</span>
-            </div>
-
-          </div>
-          <span class="card_icon"><i class="bi bi-shop-window d-flex"></i></span>
-        </div>
-      </div>
-
-      <div class="col-11 col-md-6 col-lg-3">
-        <div class="infos_card d-flex justify-content-between cart_info">
-          <div class="card_details d-flex flex-column">
-
-            <div class="details_today d-flex flex-column">
-              <span class="today_count">7</span>
-              <span class="today_title">سبد خرید امروز</span>
-              <span class="today_description">سبد های خرید امروز</span>
-            </div>
-
-            <hr />
-
-            <div class="details_lastWeack">
-              <span class="lastWeack_count">13</span>
-              <span class="lastWeack_description">در هفته گذشته</span>
-            </div>
-
-            <div class="details_lastMounth">
-              <span class="lastMounth_count">18</span>
-              <span class="lastMounth_description">در ماه گذشته</span>
-            </div>
-
-          </div>
-          <span class="card_icon"><i class="bi bi-basket d-flex"></i></span>
-        </div>
-      </div>
-
     </div>
 
+    <!-- #endregion Dashboard-->
 
   </main>
-  <!-- #endregion Main-Section-->
+
 
   <!-- #region Footer-->
 

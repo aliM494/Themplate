@@ -314,6 +314,7 @@
 
 /* ----------------------------- Footer ----------------------------- */
 
+
 .nav-bottom {
   position: fixed;
   bottom: 0px;
@@ -347,4 +348,33 @@
 .nav-bottom a.active i {
   color: var(--color-button);
   background-color: var(--color-button-light);
+}
+
+
+/* ----------------------------- Responsive Table ----------------------------- */
+table{
+  display: flex;
+  text-align: center;
+}
+
+table thead tr{
+ display: flex;
+ flex-direction: column;
+}
+
+table thead tr th{
+  margin: 8px;
+}
+
+table tbody tr{
+  display: flex;
+  flex-direction: column;
+}
+
+table tbody{
+   display: flex;
+}
+
+table tbody tr td{
+   margin: 8px;
 }
