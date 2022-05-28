@@ -56,6 +56,8 @@ main {
 
 main .cards-info .card-div {
   padding: 24px;
+  display: flex;
+  justify-content: space-between;
   border-radius: 16px;
   box-shadow: var(--main-box-out-shadow);
   margin: 16px 8px;
@@ -94,7 +96,9 @@ main .cards-info .card-div {
   font-size: 2.5em;
 }
 
-/*-----Info-Box-Color-----*/
+
+
+/* #region Info-Box-Color */
 
 .income_info {
   background: linear-gradient(108.82deg, #A1DFFE 3.48%, #9FBCE9 95.45%);
@@ -128,3 +132,6 @@ main .cards-info .card-div {
 .cart_info .card_icon {
   color: #B80390;
 }
+
+/* #endregion Info-Box-Color */
+
