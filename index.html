@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="Images/logo.ico" />
+  <title>پنل مدیریت</title>
+
+  <!-- link-css-bootstrap -->
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.css" />
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap-grid.css" />
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap-reboot.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
+
+  <!-- link-css-animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- link-style -->
+  <link rel="stylesheet" href="./style/main.css" />
+  <link rel="stylesheet" href="./style/mobile/mobileStyle.css" />
+</head>
+
+<body>
+
+  <!-- #region Header-->
+  <header>
+    <nav class="mobile nav-top-mobile d-flex justify-content-around align-items-center d-lg-none">
+      <div class="col-1 d-flex justify-content-center div-hamburger me-1" onclick="openSidebar()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="col-5 profile">
+        <img src="Images/profile.png" />
+        <span>علی موسوی</span>
+      </div>
+
+      <div class="col-5 ms-1 search-box">
+        <span><i class="bi bi-search"></i></span>
+        <input type="text" placeholder="جستجو..." />
+      </div>
+    </nav>
+
+  </header>
+  <!-- #endregion Header-->
+
+  <!-- #region Sidebar -->
+  <div class="div-sidebar">
+    <nav class="sidebar">
+      <div class="logo-details">
+        <a href="https://codeyad.com/" target="_blank">
+          <img src="./Images/logo.png" class="img-fluid" alt="" />
+        </a>
+      </div>
+
+      <div class="menu">
+        <ul class="menu-links">
+          <li class="link">
+            <a href="#" class="a-link">
+              <div class="link_details">
+                <span class="link_icon">
+                  <i class="bi bi-columns-gap"></i>
+                </span>
+                <span class="link_name">داشبورد</span>
+              </div>
+            </a>
+          </li>
+          <li class="link">
+            <a href="#" class="a-link">
+              <div class="link_details">
+                <span class="link_icon">
+                  <i class="bi bi-cart"></i>
+                </span>
+                <span class="link_name">فروشگاه</span>
+              </div>
+              <span class="link_arrow">
+                <i class="bi bi-caret-left-fill"></i>
+              </span>
+            </a>
+
+            <ul class="sub-menu">
+              <li class="s-link"><a href="#">مدیریت گروه محصولات</a></li>
+              <li class="s-link"><a href="#">مدیریت محصول</a></li>
+              <li class="s-link"><a href="#">مدیریت برند ها</a></li>
+              <li class="s-link"><a href="#">مدیریت گارانتی ها</a></li>
+              <li class="s-link"><a href="#">مدیریت رنگ ها</a></li>
+              <li class="s-link"><a href="#">مدیریت تخفیف ها</a></li>
+            </ul>
+          </li>
+          <li class="link">
+            <a href="#" class="a-link">
+              <div class="link_details">
+                <span style="--c: rgba(6, 188, 24, 0.67)" class="link_icon"><i class="bi bi-basket"></i></span>
+                <span class="link_name">سفارشات و سبد</span>
+              </div>
+              <span class="link_arrow">
+                <i class="bi bi-caret-left-fill"></i>
+              </span>
+            </a>
+
+            <ul class="sub-menu">
+              <li class="s-link"><a href="#">مدیریت سبد ها</a></li>
+              <li class="s-link"><a href="#">مدیریت سفارشات</a></li>
+              <li class="s-link"><a href="#">مدیریت نحوه ارسال</a></li>
+            </ul>
+          </li>
+          <li class="link">
+            <a href="#" class="a-link">
+              <div class="link_details">
+                <span style="--c: rgba(6, 188, 24, 0.67)" class="link_icon"><i class="bi bi-people"></i></span>
+                <span class="link_name">کاربران و همکاران</span>
+              </div>
+              <span class="link_arrow">
+                <i class="bi bi-caret-left-fill"></i>
+              </span>
+            </a>
+
+            <ul class="sub-menu">
+              <li class="s-link"><a href="#">مشاهده کاربران</a></li>
+              <li class="s-link"><a href="#">نقش ها</a></li>
+              <li class="s-link"><a href="#">مجوزها</a></li>
+            </ul>
+          </li>
+          <li class="link">
+            <a href="#" class="a-link">
+              <div class="link_details">
+                <span style="--c: rgba(6, 188, 24, 0.67)" class="link_icon"><i class="bi bi-chat-dots"></i></span>
+                <span class="link_name">ارتباطات</span>
+              </div>
+              <span class="link_arrow">
+                <i class="bi bi-caret-left-fill"></i>
+              </span>
+            </a>
+
+            <ul class="sub-menu">
+              <li class="s-link"><a href="#">سوال ها</a></li>
+              <li class="s-link"><a href="#">نظرات</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="logout">
+        <a href="#">
+          <span class="logout_icon">
+            <i class="bi bi-person"></i>
+          </span>
+          <span class="logout_name">خروج به حساب</span>
+        </a>
+      </div>
+    </nav>
+  </div>
+  <!-- #endregion Sidebar-->
+
+  <main class="container-fluid">
+
+    <!-- #region Dashboard-->
+
+    <div class="dashboard d-flex justify-content-center justify-content-lg-between flex-wrap">
+
+      <div class="cards-info d-flex justify-content-center col-12 col-lg-11 row g-0 g-lg-3">
+
+        <div class="col-11 col-md-6 col-lg-3 ">
+          <div class="card-div income_info">
+            <div class="card_details d-flex flex-column">
+
+              <div class="details_today d-flex flex-column">
+                <span class="today_count">15000000</span>
+                <span class="today_title">در آمد امروز</span>
+                <span class="today_description">جمع مبالغ پرداختی(تومان)</span>
+              </div>
+
+              <hr />
+
+              <div class="details_lastWeack">
+                <span class="lastWeack_count">6380000</span>
+                <span class="lastWeack_description">در هفته گذشته</span>
+              </div>
+
+              <div class="details_lastMounth">
+                <span class="lastMounth_count">22480000</span>
+                <span class="lastMounth_description">در ماه گذشته</span>
+              </div>
+
+            </div>
+            <span class="card_icon"><i class="bi bi-credit-card d-flex"></i></span>
+          </div>
+        </div>
+
+        <div class="col-11 col-md-6 col-lg-3">
+          <div class="card-div orders_info">
+            <div class="card_details d-flex flex-column">
+
+              <div class="details_today d-flex flex-column">
+                <span class="today_count">45</span>
+                <span class="today_title">سفارشات امروز</span>
+                <span class="today_description">سفارشات کامل ودارای پرداختی</span>
+              </div>
+
+              <hr />
+
+              <div class="details_lastWeack">
+                <span class="lastWeack_count">236</span>
+                <span class="lastWeack_description">در هفته گذشته</span>
+              </div>
+
+              <div class="details_lastMounth">
+                <span class="lastMounth_count">1038</span>
+                <span class="lastMounth_description">در ماه گذشته</span>
+              </div>
+
+            </div>
+            <span class="card_icon"><i class="bi bi-receipt d-flex"></i></span>
+          </div>
+        </div>
+
+        <div class="col-11 col-md-6 col-lg-3">
+          <div class="card-div suspended_orders_info">
+            <div class="card_details d-flex flex-column">
+
+              <div class="details_today d-flex flex-column">
+                <span class="today_count">5</span>
+                <span class="today_title">سفارشات مانده امروز</span>
+                <span class="today_description">سفارشات معلق و فاقد پرداختی</span>
+              </div>
+
+              <hr />
+
+              <div class="details_lastWeack">
+                <span class="lastWeack_count">9</span>
+                <span class="lastWeack_description">در هفته گذشته</span>
+              </div>
+
+              <div class="details_lastMounth">
+                <span class="lastMounth_count">16</span>
+                <span class="lastMounth_description">در ماه گذشته</span>
+              </div>
+
+            </div>
+            <span class="card_icon"><i class="bi bi-shop-window d-flex"></i></span>
+          </div>
+        </div>
+
+        <div class="col-11 col-md-6 col-lg-3">
+          <div class="card-div cart_info">
+            <div class="card_details d-flex flex-column">
+
+              <div class="details_today d-flex flex-column">
+                <span class="today_count">7</span>
+                <span class="today_title">سبد خرید امروز</span>
+                <span class="today_description">سبد های خرید امروز</span>
+              </div>
+
+              <hr />
+
+              <div class="details_lastWeack">
+                <span class="lastWeack_count">13</span>
+                <span class="lastWeack_description">در هفته گذشته</span>
+              </div>
+
+              <div class="details_lastMounth">
+                <span class="lastMounth_count">18</span>
+                <span class="lastMounth_description">در ماه گذشته</span>
+              </div>
+
+            </div>
+            <span class="card_icon"><i class="bi bi-basket d-flex"></i></span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="details d-flex justify-content-center justify-content-lg-evenly col-12 col-lg-11 row g-0 g-lg-3">
+
+        <!-- #region Table-->
+
+        <div class="div-table d-flex align-items-center justify-content-center row col-11 col-md-6 col-lg-5  ">
+
+          <p class="details-header">جدول</p>
+          <table class="table table-borderless">
+
+
+
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>دسته</th>
+                <th>عنوان</th>
+                <th>وضعیت</th>
+                <th>عملیات</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>دسته فلان</td>
+                <td>تست</td>
+                <td>وضعیت تست</td>
+                <td><i class="bi bi-x delete"></i></td>
+              </tr>
+
+              <tr>
+                <td>1</td>
+                <td>دسته فلان</td>
+                <td>تست</td>
+                <td>وضعیت تست</td>
+                <td><i class="bi bi-x delete"></i></td>
+              </tr>
+
+              <tr>
+                <td>1</td>
+                <td>دسته فلان</td>
+                <td>تست</td>
+                <td>وضعیت تست</td>
+                <td><i class="bi bi-x delete"></i></td>
+              </tr>
+
+              <tr>
+                <td>1</td>
+                <td>دسته فلان</td>
+                <td>تست</td>
+                <td>وضعیت تست</td>
+                <td><i class="bi bi-x delete"></i></td>
+              </tr>
+
+            </tbody>
+          </table>
+
+        </div>
+
+
+        <!-- #endregion Table-->
+
+
+      </div>
+
+    </div>
+
+    </div>
+
+    <!-- #endregion Dashboard-->
+
+  </main>
+
+
+  <!-- #region Footer-->
+
+  <footer>
+    <nav class="nav-bottom text-center d-flex align-items-center">
+      <a href="#" class="col-4 animate__animated"><i class="bi bi-moon"></i></a>
+      <a href="#" class="col-4 animate__animated"><i class="bi bi-bell"></i></a>
+      <a href="#" class="col-4 animate__animated"><i class="bi bi-grid"></i></a>
+    </nav>
+  </footer>
+  <!-- #endregion Footer-->
+
+
+
+
+
+  <!-- link-js-bootstrap -->
+  <script src="./bootstrap/js/bootstrap.js"></script>
+  <script src="./bootstrap/js/bootstrap.min.js"></script>
+  <script src="./bootstrap/js/bootstrap.bundle.js"></script>
+
+  <!-- link-js -->
+  <script src="js/utility.js"></script>
+  <script src="js/index.js"></script>
+
+</body>
+
+</html>
